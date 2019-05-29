@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Media, Card } from 'react-bootstrap'
+
 
 export default class OneCat extends Component {
 
@@ -9,14 +11,20 @@ export default class OneCat extends Component {
   render() {
     console.log("checkingSTATE:" + this.props.catArr)
     return (
-      <div>
-        <h1>One Cat</h1>
+      <Card>
+        <Media>
+        
         <h6>{this.props.header}</h6>
-        {this.props.catArr.map(item => {
-         return <img src={item.url} alt="cat"/>
+        {this.props.catArr.map((item, i) => {
+         return <img key={i} src={item.url} alt="cat"/>
         })}
         
-      </div>
+        <Media.Body>
+        <h1>ONE LOVE.</h1>
+        <p>Be kind to feril cats.</p>
+        </Media.Body>
+        </Media>
+      </Card>
     )
   }
 }

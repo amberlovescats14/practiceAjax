@@ -9,6 +9,17 @@ const setCats = (state=[], action) => {
   }
 }
 
+const setThreeCats = (state = [], action) => {
+  switch(action.type){
+    case "THREE_CATS":
+    return state.concat(action.value);
+    default:
+    return state
+  }
+}
+
+
 export default combineReducers({
-  catArr: setCats
+  catArr: setCats,
+  threeCats: setThreeCats,
 })

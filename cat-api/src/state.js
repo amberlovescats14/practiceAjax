@@ -1,7 +1,8 @@
 export default {
 
       catArr: [],
-      catIMG: '',
-      header: "Amber Loves Cats!"
+      header: "Amber Loves Cats!",
+      threeCats: [],
+      open: false
 
 }
