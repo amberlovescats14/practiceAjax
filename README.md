@@ -1,0 +1,2 @@
+# practiceAjax
+with react-redux 
